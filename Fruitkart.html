@@ -1,0 +1,68 @@
+<html>
+<head>
+    
+    <title>THE FRUITKART</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #8b8161;
+        }
+        h1 {
+            color: aliceblue;
+        }
+        .item {
+            background-color:#921f00;
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            background-color:pink;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the fruitkart</h1>
+    <p>Click the button to add an item to the cart.</p>
+
+    <div class="item">
+        <p>🍎 apple - ₹50</p>
+        <button onclick="addToCart('apple')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🍒 Cherry - ₹200</p>
+        <button onclick="addToCart(' Cherry ')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p> 🍌Banana - ₹150</p>
+        <button onclick="addToCart('Banana ')">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h3>Shopping Cart</h3>
+        <p id="cartList">Cart is empty</p>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            let cart = document.getElementById("cartList");
+            if (cart.innerHTML === "Cart is empty") {
+                cart.innerHTML = item;
+            } else {
+                cart.innerHTML += ", " + item;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
